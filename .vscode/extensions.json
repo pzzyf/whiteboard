@@ -1,0 +1,23 @@
+{
+  "recommendations": [
+    // Vue 开发必备
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin",
+    
+    // i18n 国际化支持
+    "lokalise.i18n-ally",
+    
+    // 代码质量
+    "dbaeumer.vscode-eslint",
+    "bradlc.vscode-tailwindcss",
+    
+    // 开发体验
+    "formulahendry.auto-rename-tag",
+    "christian-kohler.path-intellisense",
+    "ms-vscode.vscode-json"
+  ],
+  "unwantedRecommendations": [
+    // 避免与 Volar 冲突
+    "octref.vetur"
+  ]
+}
