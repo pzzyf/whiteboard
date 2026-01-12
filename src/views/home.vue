@@ -1,19 +1,19 @@
 <script setup>
-import { useI18n } from 'vue-i18n'
-import { setLocale, supportedLocales } from '@/i18n/index.js'
+import { onMounted, ref } from 'vue'
 
-const { t } = useI18n()
+const canvas = ref(null)
+
+onMounted(() => {
+  const ctx = canvas.value.getContext('2d')
+  ctx.fillStyle = 'red'
+  ctx.fillRect(0, 0, 100, 100)
+})
 </script>
 
 <template>
-  <div>
-    <div v-for="item in supportedLocales" :key="item.name">
-      <div @click="setLocale(item.code)">
-        {{ item.name }}
-      </div>
-    </div>
-    <div>
-      {{ t('common.language') }}
-    </div>
-  </div>
+  <canvas ref="canvas" width="100" height="100" />
 </template>
+
+<style scoped>
+
+</style>
